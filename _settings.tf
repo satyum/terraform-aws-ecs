@@ -1,8 +1,5 @@
 provider "aws" {
   region  = "us-east-1"
-  access_key = "AKIAWPLZYSGC5YJ2WIMR"
-  secret_key = "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"
-  # profile =  "default"
 #    assume_role {
 #        role_arn = "arn:aws:iam::${local.workspace["aws"]["account_id"]}:role/${local.workspace["aws"]["role"]}"
 #     }
@@ -14,9 +11,6 @@ terraform {
     key            = "ecs-terraform"
     region         = "us-east-1"
     encrypt        = true
-    access_key = "AKIAWPLZYSGC5YJ2WIMR"
-    secret_key = "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"
-    # profile = "default"
     
   }
 }

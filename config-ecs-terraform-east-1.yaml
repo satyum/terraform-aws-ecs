@@ -3,10 +3,10 @@ workspaces:
     # ... (other configuration values)
     aws:
       # role: aws-infra-us-east-1-nw-social-infra-deploy-access-role
-      account_id: "445321351557"
+      account_id: "xxxxxxxx"
       region: us-east-1
       
-    account_name: ayushme18
+    account_name: abcd
     project_name: ecs-terraform # update client name here
     environment_name: prod
 
