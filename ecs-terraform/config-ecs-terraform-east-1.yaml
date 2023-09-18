@@ -1,0 +1,41 @@
+workspaces:
+  ecs-terraform-east-1:
+    # ... (other configuration values)
+    aws:
+      # role: aws-infra-us-east-1-nw-social-infra-deploy-access-role
+      account_id: "445321351557"
+      region: us-east-1
+      
+    account_name: ayushme18
+    project_name: ecs-terraform # update client name here
+    environment_name: prod
+
+    ecs_cluster:
+      name: "my-ecs-cluster" # Replace with your ECS cluster name
+      container_name: "test-container" # Replace with your ECS container name
+      container_port: 80 # Replace with your ECS container port
+
+      region: "us-east-1"  # Replace with your desired AWS region
+
+      # subnet_selection:
+      #   - type: "private"
+      #     ids:
+      #       - "subnet-12345678"
+      #       - "subnet-23456789"
+      #   - type: "larger_private"
+      #     ids:
+      #       - "subnet-34567890"
+      #       - "subnet-45678901"
+      #       - "subnet-56789012"
+
+      alb_sg:
+        security_group_id: "sg-0123456789abcdef0"  # Replace with your ALB security group ID
+
+      fargate_capacity_providers:
+        FARGATE:
+          default_capacity_provider_strategy:
+            weight: 50
+            base: 20
+        FARGATE_SPOT:
+          default_capacity_provider_strategy:
+            weight: 50
